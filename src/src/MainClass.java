@@ -22,7 +22,7 @@ public class MainClass {
 		Item TShirt = new Item();
 		Item Mug = new Item();
 		// Campus Store Should have Location(String), Number of Employes(integer), and name of manager (String)
-		Shop CampusStore = new shop();
+		Shop CampusStore = new Shop();
 		// Department should have Name (String), ManagerName(String), and Number of Employes(integer)
 		Department SalesDept = new Department();
 		// Complaint should have ComplaintNumber (integer) Receipt (class), EmployeeName (String), CustomerName(String) 
@@ -40,7 +40,7 @@ public class MainClass {
 		Receipt Change = new Receipt();
 		
 		// Form should have Form number (integer), Manager Name(string), and department (String)
-		//It should also have a print Form.
+		//It should also have a print Form that allows a string input.
 		Form Report = new Form();
 		
 		// Vendor Should have Name(String), Item Name Supplied (String),
@@ -49,48 +49,61 @@ public class MainClass {
 		// Warehouse should have an array of Item types(Item, size is constructor) and Location(String)
 		Warehouse RosvilleWareHouse = new Warehouse(10);
 		
-		// Delivery should have ItemName(String), CustomerName(String), DeliveryAddress(String)
+		// Delivery should have ItemName(String), CustomerName(String), DeliveryAddress(String), and TruckNumber (integer)
 		Delivery ShirtDelivery = new Delivery();
 		
-		
+		// DeliveryTruck should have a TruckNumber (integer), Trucktype (String), and Average MPG (double)
+		DeliveryTruck Truck = new DeliveryTruck();
 		
 		double Pricing;
 		String Response, ManagerReport;
 		
-		
+		// Setup for Customer
 		Cust.setName("Franklin Graham");
 		Cust.setCity("Asheville");
 				
+		// Setup for Employee
 		John.setName("John Mark");
 		John.setDepartment("Sales");
 		John.setManager("Paul");
 		
-		
+		// Setup for Manager
 		Paul.setName("Saul Paul");
 		Paul.setDepartment("Sales");
 		Paul.setManager("Peter");
 		Paul.setStore("Roseville");
 		
+		// Setup for Department
 		SalesDept.setName("Sales");
 		SalesDept.setEmployeeCount(10);
 		SalesDept.setHead("Simon Peter");
 		
-		
+		// Setup for Items
 		TShirt.setName("UNWSP Shirt");
 		TShirt.setPrice(5.99);
 		Mug.setName("UNSWP Mug");
 		Mug.setPrice(4.99);
 		
+		// Setup for Trucks
+		Truck.setNum(5532);
+		Truck.setType("Semi-truck");
+		Truck.setAveMPG(4.6);
+		
+		// Setup for Warehouse
+		// The set and get methods should first get the index of where it will be stored in the array
 		RosvilleWareHouse.setItem(0,TShirt);
 		RosvilleWareHouse.setItem(1,Mug);
 		RosvilleWareHouse.setLocation("Roseville");
 		
+		// Setup for Vendor
 		TShirtsRUs.setName("T-Shirts-R-Us");
 		TShirtsRUs.setItemSupplied("UNWSP Shirt");
 		
+		// Setup for Sale
 		SaleStore.setItem(TShirt);
 		SaleStore.setNumber(3);
 		
+		// Setup for 
 		CampusStore.setLocation("Billy");
 		CampusStore.setEmployees(5);
 		CampusStore.setManagerName(Paul.getName());
@@ -127,12 +140,12 @@ public class MainClass {
 		TShirtTrans.setItem(Change.getItem());
 		TShirtTrans.setTotal(Change.getPrice());
 		
-		
 		ShirtDelivery.setItem(TShirtTrans.getItem());
 		ShirtDelivery.setCustName(TShirtTrans.getCustName());
 		ShirtDelivery.setDeliveryAddress("3003 Snelling Ave N, Roseville, MN 55113");
-		
+		ShirtDelivery.setTruckNum(Truck.getNum());
 			
+		
 		ManagerReport= "We had a great sale of T-shirts this quarter. We got $" + Double.toString(TShirtTrans.getTotal())+ " out of one transaction";
 		
 		// This is the setup for a report object
@@ -142,12 +155,27 @@ public class MainClass {
 		// This method should use all attributes within the class in the print output in addition to the message.
 		Report.print(ManagerReport);
 		
-		//
+		//This calls every get method
 		
+		System.out.println("");
+		System.out.println("Report on all objects");
+		System.out.println(Cust.getName() + " " + Cust.getCity());
+		System.out.println(John.getName() + " " + John.getDepartment() +" " + John.getManager());
+		System.out.println(SalesDept.getName() + " " + SalesDept.getEmployeeCount() + SalesDept.getHead());
+		System.out.println(Mug.getName() + " " + Mug.getPrice());
+		System.out.println(Truck.setNum() + " " + Truck.getType() + " "+ Truck.getAveMPG());
+		System.out.println(RosvilleWareHouse.getLocation() + " " + RosvilleWareHouse.getItem(0).getName() + " " + RosvilleWareHouse.getItem(1).getName());
+		System.out.println(TShirtsRUs.getName() + " " + TShirtsRUs.getItemSupplied);
+		System.out.println(SaleStore.getItem().getName() + " " + SaleStore.getNumber());
+		System.out.println(CampusStore.getLocation() + " " + CampusStore.getEmployees() + " " + CampusStore.getManagerName());
+		System.out.println(Roseville.getTax() + " " + Roseville.getState() + " " + Roseville.getStore());
+		System.out.println(Change.getPrice() + " " + Change.getName() + " " + Change.getItem().getName());
+		System.out.println(Concern.getReceipt().getName() + " " +  Concern.getNumber() + " " + Concern.getEmployeeName() + " " + Concern.getCustomerName());
+		System.out.println(BadItem.getCustomer() + " " + BadItem.getManagerName() + " " + BadItem.getResponse());
+		System.out.println(TShirtTrans.getCustName() + " " + TShirtTrans.getItem().getName() + " " + TShirtTrans.getTotal());
+		System.out.println(ShirtDelivery.getItem().getName() + " " + ShirtDelivery.getCustName() + ShirtDelivery.getDeliveryAddress() + " " + ShirtDelivery.getTruckNum());
+		System.out.println(Report.getnumber() + " " + Report.getManagerName() + " " +Report.getDepartment());
 		
-		
-		
-
 	}
 
 }
