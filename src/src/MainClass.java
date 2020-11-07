@@ -161,6 +161,7 @@ public class MainClass {
 		System.out.println("Report on all objects");
 		System.out.println(Cust.getName() + " " + Cust.getCity());
 		System.out.println(John.getName() + " " + John.getDepartment() +" " + John.getManager());
+		System.out.println(Paul.getName() + " " + Paul.getDepartment() + " " + Paul.getManager() + " " + Paul.getStore());
 		System.out.println(SalesDept.getName() + " " + SalesDept.getEmployeeCount() + SalesDept.getHead());
 		System.out.println(Mug.getName() + " " + Mug.getPrice());
 		System.out.println(Truck.setNum() + " " + Truck.getType() + " "+ Truck.getAveMPG());
