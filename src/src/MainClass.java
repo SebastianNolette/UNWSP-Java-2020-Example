@@ -122,7 +122,7 @@ public class MainClass {
 		
 		BadItem.setResponse(Response);
 
-		
+		// This is the setup for a Transaction Object
 		TShirtTrans.setCustName(Cust.getName());
 		TShirtTrans.setItem(Change.getItem());
 		TShirtTrans.setTotal(Change.getPrice());
