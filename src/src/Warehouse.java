@@ -18,8 +18,12 @@ public class Warehouse {
 	}
 
 	public String getLocation() {
-		// TODO Auto-generated method stub
-		return null;
+		return location;
+	}
+	
+
+	public void setLocation(String name) {
+		location=name;
 	}
 
 }
