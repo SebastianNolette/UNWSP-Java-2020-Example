@@ -91,8 +91,8 @@ public class MainClass {
 		
 		// Setup for Warehouse
 		// The set and get methods should first get the index of where it will be stored in the array
-		RosvilleWareHouse.setItem(0,TShirt);
-		RosvilleWareHouse.setItem(1,Mug);
+		RosvilleWareHouse.setItem(0,"UNWSP Shirt");
+		RosvilleWareHouse.setItem(1,"UNSWP Mug");
 		RosvilleWareHouse.setLocation("Roseville");
 		
 		// Setup for Vendor
