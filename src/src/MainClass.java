@@ -16,26 +16,27 @@ public class MainClass {
 		Employee John = new Employee();
 		// Manager should the same attributes of Employee with the addition of Store (String)	
 		Manager Paul = new Manager();
-		// Sale should have number of items(integer) and Item (class)
-		Sale SaleStore = new Sale();
-		// Item should have Name(String) and Price double
+		// Sale should have number of items(integer) and ItemName (String)
+		Sale SaleStore = new Sale(); 
+		
+		// Item should have Name(String) and Price (double)
 		Item TShirt = new Item();
 		Item Mug = new Item();
 		// Campus Store Should have Location(String), Number of Employes(integer), and name of manager (String)
 		Shop CampusStore = new Shop();
 		// Department should have Name (String), ManagerName(String), and Number of Employes(integer)
 		Department SalesDept = new Department();
-		// Complaint should have ComplaintNumber (integer) Receipt (class), EmployeeName (String), CustomerName(String) 
+		// Complaint should have ComplaintNumber (integer) Receipt (String), EmployeeName (String), CustomerName(String) 
 		Complaint Concern = new Complaint();
+		
 		// CompEmail should have Customer Name (String) Manager name (String) and Response (String)
 		CompEmail BadItem = new CompEmail();
 		// City should have Name(string) and Tax Rate (double), and StoreLocation (String)
 		City Roseville = new City();
-		
 		// Transaction Should have CustomerName (String) 
 		Transaction TShirtTrans = new Transaction();
 		
-		//Receipt should have Price (double) CustomerName (string) and Item (string)
+		//Receipt should have Price (double) CustomerName (string) and Item Name (string)
 		// It should also have a print Receipt Method (System.out.print or Joption pane attributes)
 		Receipt Change = new Receipt();
 		
@@ -46,12 +47,11 @@ public class MainClass {
 		// Vendor Should have Name(String), Item Name Supplied (String),
 		Vendor TShirtsRUs = new Vendor();
 		
-		// Warehouse should have an array of Item types(Item, size is constructor) and Location(String)
+		// Warehouse should have an array of Item types(String, size is constructor) and Location(String)
 		Warehouse RosvilleWareHouse = new Warehouse(10);
 		
 		// Delivery should have ItemName(String), CustomerName(String), DeliveryAddress(String), and TruckNumber (integer)
 		Delivery ShirtDelivery = new Delivery();
-		
 		// DeliveryTruck should have a TruckNumber (integer), Trucktype (String), and Average MPG (double)
 		DeliveryTruck Truck = new DeliveryTruck();
 		
@@ -100,7 +100,7 @@ public class MainClass {
 		TShirtsRUs.setItemSupplied("UNWSP Shirt");
 		
 		// Setup for Sale
-		SaleStore.setItem(TShirt);
+		SaleStore.setItem("UNWSP Shirt");
 		SaleStore.setNumber(3);
 		
 		// Setup for 
@@ -120,7 +120,7 @@ public class MainClass {
 		// This method should use all attributes within the class in the print output
 		Change.Print();
 		
-		Concern.setReceipt(Change);
+		Concern.setReceipt("Receipt 3301");
 		Concern.setNumber(1);
 		Concern.setEmployeeName(John.getName());
 		Concern.setCustomerName(Cust.getName());
@@ -128,7 +128,7 @@ public class MainClass {
 		// 
 		
 		
-		BadItem.setCustomer(Concern.getCustomerName);
+		BadItem.setCustomer(Concern.getCustomerName());
 		BadItem.setManagerName(Paul.getName());
 
 		Response = "Hey, My T shirt has not been delivered" + BadItem.getManagerName();
@@ -165,16 +165,16 @@ public class MainClass {
 		System.out.println(SalesDept.getName() + " " + SalesDept.getEmployeeCount() + SalesDept.getHead());
 		System.out.println(Mug.getName() + " " + Mug.getPrice());
 		System.out.println(Truck.setNum() + " " + Truck.getType() + " "+ Truck.getAveMPG());
-		System.out.println(RosvilleWareHouse.getLocation() + " " + RosvilleWareHouse.getItem(0).getName() + " " + RosvilleWareHouse.getItem(1).getName());
-		System.out.println(TShirtsRUs.getName() + " " + TShirtsRUs.getItemSupplied);
-		System.out.println(SaleStore.getItem().getName() + " " + SaleStore.getNumber());
+		System.out.println(RosvilleWareHouse.getLocation() + " " + RosvilleWareHouse.getItem(0) + " " + RosvilleWareHouse.getItem(1));
+		System.out.println(TShirtsRUs.getName() + " " + TShirtsRUs.getItemSupplied());
+		System.out.println(SaleStore.getItem() + " " + SaleStore.getNumber());
 		System.out.println(CampusStore.getLocation() + " " + CampusStore.getEmployees() + " " + CampusStore.getManagerName());
 		System.out.println(Roseville.getTax() + " " + Roseville.getState() + " " + Roseville.getStore());
-		System.out.println(Change.getPrice() + " " + Change.getName() + " " + Change.getItem().getName());
-		System.out.println(Concern.getReceipt().getName() + " " +  Concern.getNumber() + " " + Concern.getEmployeeName() + " " + Concern.getCustomerName());
+		System.out.println(Change.getPrice() + " " + Change.getName() + " " + Change.getItem());
+		System.out.println(Concern.getReceipt() + " " +  Concern.getNumber() + " " + Concern.getEmployeeName() + " " + Concern.getCustomerName());
 		System.out.println(BadItem.getCustomer() + " " + BadItem.getManagerName() + " " + BadItem.getResponse());
-		System.out.println(TShirtTrans.getCustName() + " " + TShirtTrans.getItem().getName() + " " + TShirtTrans.getTotal());
-		System.out.println(ShirtDelivery.getItem().getName() + " " + ShirtDelivery.getCustName() + ShirtDelivery.getDeliveryAddress() + " " + ShirtDelivery.getTruckNum());
+		System.out.println(TShirtTrans.getCustName() + " " + TShirtTrans.getItem() + " " + TShirtTrans.getTotal());
+		System.out.println(ShirtDelivery.getItem() + " " + ShirtDelivery.getCustName() + ShirtDelivery.getDeliveryAddress() + " " + ShirtDelivery.getTruckNum());
 		System.out.println(Report.getnumber() + " " + Report.getManagerName() + " " +Report.getDepartment());
 		
 	}
