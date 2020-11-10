@@ -47,6 +47,6 @@ public class Manager
 		return Store;
 	}
 
-	//Davis
+	//Davis 2
 }
 	
