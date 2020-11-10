@@ -1,5 +1,5 @@
 package src;
-//Most recent
+
 public class Customer 
 {
 	String name, city;
