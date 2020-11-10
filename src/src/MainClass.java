@@ -125,7 +125,7 @@ public class MainClass {
 		Concern.setEmployeeName(John.getName());
 		Concern.setCustomerName(Cust.getName());
 		
-		// 
+		// a
 		
 		
 		BadItem.setCustomer(Concern.getCustomerName());
