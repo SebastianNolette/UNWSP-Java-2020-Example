@@ -1,19 +1,19 @@
 package src;//Test
 
 public class Warehouse {
-	Item[] items;
+	String[] items;
 	String location;
 	
 	public Warehouse(int size, String loc) {
-		items = new Item[size];
+		items = new String[size];
 		location=loc;
 	}
 	
-	public Item getItem(int i) {
+	public String getItem(int i) {
 		return items[i];
 	}
 	
-	public void setItem(int i, Item q) {
+	public void setItem(int i, String q) {
 		items[i]=q;
 	}
 
