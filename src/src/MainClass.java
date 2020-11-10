@@ -8,9 +8,6 @@ public class MainClass {
 	public static void main(String[] args) {
 		
 		// Each attribute should have a getter and setter method. 
-		
-		/*
-		
 		// Classes with minimum Attributes (these must be included for the program to work)
 		// Customer Should have name(String), and city(String)
 		Customer Cust = new Customer();
@@ -25,14 +22,8 @@ public class MainClass {
 		Item Mug = new Item();
 		// Campus Store Should have Location(String), Number of Employes(integer), and name of manager (String)
 		Shop CampusStore = new Shop();
-		
-		*/
-		
 		// Department should have Name (String), ManagerName(String), and Number of Employes(integer)
 		Department SalesDept = new Department();
-		
-		/*
-		
 		// Complaint should have ComplaintNumber (integer) Receipt (class), EmployeeName (String), CustomerName(String) 
 		Complaint Concern = new Complaint();
 		// CompEmail should have Customer Name (String) Manager name (String) and Response (String)
@@ -82,16 +73,12 @@ public class MainClass {
 		Paul.setDepartment("Sales");
 		Paul.setManager("Peter");
 		Paul.setStore("Roseville");
-		
-		*/
-		
+
 		// Setup for Department
 		SalesDept.setName("Sales");
 		SalesDept.setEmployeeCount(10);
 		SalesDept.setHead("Simon Peter");
-		
-		/*
-		
+
 		// Setup for Items
 		TShirt.setName("UNWSP Shirt");
 		TShirt.setPrice(5.99);
@@ -176,13 +163,9 @@ public class MainClass {
 		System.out.println(Cust.getName() + " " + Cust.getCity());
 		System.out.println(John.getName() + " " + John.getDepartment() +" " + John.getManager());
 		System.out.println(Paul.getName() + " " + Paul.getDepartment() + " " + Paul.getManager() + " " + Paul.getStore());
-		
-		*/
-		
+
 		System.out.println(SalesDept.getName() + " " + SalesDept.getEmployeeCount() + " " + SalesDept.getHead());
-		
-		/*
-		
+
 		System.out.println(Mug.getName() + " " + Mug.getPrice());
 		System.out.println(Truck.setNum() + " " + Truck.getType() + " "+ Truck.getAveMPG());
 		System.out.println(RosevilleWarehouse.getLocation() + " " + RosevilleWarehouse.getItem(0).getName() + " " + RosevilleWarehouse.getItem(1).getName());
@@ -196,9 +179,7 @@ public class MainClass {
 		System.out.println(TShirtTrans.getCustName() + " " + TShirtTrans.getItem().getName() + " " + TShirtTrans.getTotal());
 		System.out.println(ShirtDelivery.getItem().getName() + " " + ShirtDelivery.getCustName() + ShirtDelivery.getDeliveryAddress() + " " + ShirtDelivery.getTruckNum());
 		System.out.println(Report.getnumber() + " " + Report.getManagerName() + " " +Report.getDepartment());
-		
-		*/
-		
+
 	}
 
 }

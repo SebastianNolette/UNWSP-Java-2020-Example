@@ -2,21 +2,16 @@ package src;
 
 //Department should have Name (String), Head(String), and Number of Employes(integer)
 
+//Eric Everson
+//11/10/2020
+
 public class Department 
 {
 	//variable(s)
 	private String name, head;
 	private int employeeCount;
 	
-	/*dont need this?
-	public Department(String N, String M, int num)
-	{
-		name = N;
-		head = M;
-		employeeCount = num;
-	}
-	*/
-	
+	//name
 	public String getName() {
 		return name;
 	}
@@ -25,6 +20,7 @@ public class Department
 		name = N;
 	}
 	
+	//employeeCount
 	public int getEmployeeCount() {
 		return employeeCount;
 	}
@@ -33,6 +29,7 @@ public class Department
 		employeeCount = num;
 	}
 
+	//head
 	public String getHead() {
 		return head;
 	}
