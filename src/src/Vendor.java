@@ -22,4 +22,4 @@ public class Vendor
 	}
 	
 }
-// Sophia Evers 
+// Completed by Sophia Evers 
