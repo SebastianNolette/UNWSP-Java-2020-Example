@@ -1,5 +1,7 @@
 package src;//Test
 
+//Warehouse should have an array of Item types(Item, size is constructor) and Location(String)
+
 public class Warehouse {
 	Item[] items;
 	String location;
