@@ -21,9 +21,8 @@ public class Warehouse {
 		return location;
 	}
 	
-
-	public void setLocation(String name) {
-		location=name;
+	public void setLocation(String loc) {
+		location=loc;
 	}
 
 }
