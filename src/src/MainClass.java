@@ -149,7 +149,7 @@ public class MainClass {
 		ManagerReport= "We had a great sale of T-shirts this quarter. We got $" + Double.toString(TShirtTrans.getTotal())+ " out of one transaction";
 		
 		// This is the setup for a report object
-		Report.setnumber(124);
+		Report.setFormID(124);
 		Report.setManagerName(John.getManager());
 		Report.setDepartment(SalesDept.setName());
 		// This method should use all attributes within the class in the print output in addition to the message.
@@ -175,7 +175,7 @@ public class MainClass {
 		System.out.println(BadItem.getCustomer() + " " + BadItem.getManagerName() + " " + BadItem.getResponse());
 		System.out.println(TShirtTrans.getCustName() + " " + TShirtTrans.getItem() + " " + TShirtTrans.getTotal());
 		System.out.println(ShirtDelivery.getItem() + " " + ShirtDelivery.getCustName() + ShirtDelivery.getDeliveryAddress() + " " + ShirtDelivery.getTruckNum());
-		System.out.println(Report.getnumber() + " " + Report.getManagerName() + " " +Report.getDepartment());
+		System.out.println(Report.getFormID() + " " + Report.getManagerName() + " " +Report.getDepartment());
 		
 	}
 
