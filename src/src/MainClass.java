@@ -48,7 +48,7 @@ public class MainClass {
 		Vendor TShirtsRUs = new Vendor();
 		
 		// Warehouse should have an array of Item types(String, size is constructor) and Location(String)
-		Warehouse RosvilleWareHouse = new Warehouse(10);
+		Warehouse RosevilleWareHouse = new Warehouse(10);
 		
 		// Delivery should have ItemName(String), CustomerName(String), DeliveryAddress(String), and TruckNumber (integer)
 		Delivery ShirtDelivery = new Delivery();
@@ -91,9 +91,9 @@ public class MainClass {
 		
 		// Setup for Warehouse
 		// The set and get methods should first get the index of where it will be stored in the array
-		RosvilleWareHouse.setItem(0,"UNWSP Shirt");
-		RosvilleWareHouse.setItem(1,"UNSWP Mug");
-		RosvilleWareHouse.setLocation("Roseville");
+		RosevilleWareHouse.setItem(0,"UNWSP Shirt");
+		RosevilleWareHouse.setItem(1,"UNSWP Mug");
+		RosevilleWareHouse.setLocation("Roseville");
 		
 		// Setup for Vendor
 		TShirtsRUs.setName("T-Shirts-R-Us");
@@ -165,7 +165,7 @@ public class MainClass {
 		System.out.println(SalesDept.getName() + " " + SalesDept.getEmployeeCount() + SalesDept.getHead());
 		System.out.println(Mug.getName() + " " + Mug.getPrice());
 		System.out.println(Truck.setNum() + " " + Truck.getType() + " "+ Truck.getAveMPG());
-		System.out.println(RosvilleWareHouse.getLocation() + " " + RosvilleWareHouse.getItem(0) + " " + RosvilleWareHouse.getItem(1));
+		System.out.println(RosevilleWareHouse.getLocation() + " " + RosevilleWareHouse.getItem(0) + " " + RosevilleWareHouse.getItem(1));
 		System.out.println(TShirtsRUs.getName() + " " + TShirtsRUs.getItemSupplied());
 		System.out.println(SaleStore.getItem() + " " + SaleStore.getNumber());
 		System.out.println(CampusStore.getLocation() + " " + CampusStore.getEmployees() + " " + CampusStore.getManagerName());
